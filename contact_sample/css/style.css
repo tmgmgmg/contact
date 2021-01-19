@@ -185,7 +185,6 @@ button:focus {
 }
 @media (min-width: 768px) {
   .table_float th {
-    width: 20%;
     display: table-cell;
   }
   .table_float td {
@@ -394,7 +393,7 @@ label.privacy_check {
     text-align: left;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .min-sp-br {
     display: block;
   }
