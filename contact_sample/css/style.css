@@ -1,0 +1,429 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+お問い合わせサンプル
+
+お問い合わせのcssは238行目から
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+aタグ
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+a {
+  -webkit-transform: 0.3s all;
+  transform: 0.3s all;
+}
+a:hover {
+  opacity: 0.7;
+}
+a, a:hover, a:visited, .navbar-default .navbar-nav>li>a {
+  color: var(--txt);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+色
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+:root {
+  --green: #10a561;
+  --light-green: #8ec31f;
+  --yellow: #fccd40;
+  --orange: #ffa800;
+  --blue: #21bdbb;
+  --pink: #f99191;
+  --txt: #333333;
+  --copy: #acdb48;
+  --white: #fff;
+}
+.p, .txt {
+  color: var(--txt);
+}
+.green {
+  color: var(--green)
+}
+.lightgreen {
+  color: var(--light-green)
+}
+.yellow {
+  color: var(--yellow)
+}
+.orange {
+  color: var(--orange)
+}
+.blue {
+  color: var(--blue)
+}
+.pink {
+  color: var(--pink)
+}
+.white {
+  color: var(--white)
+}
+.bg-green {
+  background: var(--green)
+}
+.bg-lightgreen {
+  background: var(--light-green)
+}
+.bg-yellow {
+  background: var(--yellow)
+}
+.bg-orange {
+  background: var(--orange)
+}
+.bg-blue {
+  background: var(--blue)
+}
+.bg-pink {
+  background: var(--pink)
+}
+.bg-txt {
+  background: var(--txt)
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+フォントサイズ
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.8rem;
+}
+.p, dt, dd, th, td, li, div, .f-14 {
+  font-size: 1.4rem;
+}
+.f-60 {
+  font-size: 6rem;
+}
+.f-24 {
+  font-size: 2.4rem;
+}
+.f-22 {
+  font-size: 2.2rem;
+}
+.f-18 {
+  font-size: 1.8rem;
+}
+.f-16 {
+  font-size: 1.6rem;
+}
+.f-12 {
+  font-size: 1.2rem;
+}
+.f-reg {
+  font-weight: 500;
+}
+.f-bold {
+  font-weight: bold;
+}
+.f-normal {
+  font-weight: normal;
+}
+@media screen and (max-width: 414px) {
+  h2, .sec-ttl {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.8rem;
+  }
+  .f-24 {
+    font-size: 2rem;
+  }
+  .f-22 {
+    font-size: 1.8rem;
+  }
+  .f-18 {
+    font-size: 1.6rem;
+  }
+}
+
+/* 共通(仮) */
+
+.p, .txt {
+  color: var(--txt);
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+button:focus {
+  outline: none;
+}
+.p {
+  line-height: normal;
+}
+.br {
+  display: block;
+}
+
+/* テーブル */
+
+.table_float th {
+  width: 33%;
+  padding: 15px 20px;
+  vertical-align: middle;
+  text-align: left;
+  display: table-cell;
+}
+.table_float td {
+  width: 100%;
+  padding: 15px 25px;
+  display: table-cell;
+}
+.table_float td {
+  width: 100%;
+  display: block;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .table_float th {
+    width: 20%;
+    display: table-cell;
+  }
+  .table_float td {
+    display: table-cell;
+  }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+お問い合わせ
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/* 電話・FAX */
+
+.contact_wrapper {
+  padding-top: 90px;
+  padding-bottom: 80px;
+}
+.contact-number {
+  margin-bottom: 80px;
+}
+.contact-phone, .contact-fax {
+  border: 5px solid var(--light-green);
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 40px 35px;
+  border-radius: 20px;
+  color: #333;
+}
+.contact-ttl {
+  margin-bottom: 20px;
+}
+.contact-ttl span {
+  border-bottom: dashed 4px var(--yellow)
+}
+.contact-number-box .fa-phone-alt:before {
+  content: "\f879";
+  color: var(--light-green);
+}
+.contact-number-box .fa-fax:before {
+  color: var(--light-green);
+}
+.contact-phone .p, .contact-fax .p {
+  font-weight: normal;
+  margin-top: 20px;
+}
+.contact-fax .p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* 電話・FAX 　ここまで*/
+
+
+/* メールでのお問い合わせ */
+
+.mail_form {
+  margin-bottom: 80px;
+}
+.mail-form .sec-ttl {
+  margin-bottom: 60px;
+}
+.mail-form .p {
+  margin-bottom: 60px;
+  line-height: 2;
+}
+.line-br {
+  display: block;
+}
+
+/* メールでのお問い合わせ　ここまで */
+
+.contact-form {
+  background: linear-gradient(rgba(255, 255, 255, 0), #fafad3, #ddedbb);
+  padding-bottom: 30px;
+}
+
+/* フォーム */
+
+.hissu {
+  background-color: var(--light-green);
+  color: #fff;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-weight: bold;
+  float: right;
+  margin-bottom: 20px;
+}
+.hissu::before {
+  content: "必須";
+}
+.hissu-wrapper {
+  display: flex;
+}
+.hissu-wrapper .hissu {
+  margin-right: 15px;
+}
+.contact-box {
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+form .table th {
+  background-color: #fff;
+  color: #333;
+}
+.conf-item {
+  font-weight: bold;
+}
+.conf-item input {
+  width: auto;
+}
+form table input, form table textarea {
+  width: 100%;
+  padding: 15px 5px;
+}
+
+/* 個人情報取り扱い */
+
+.contact form h4 {
+  color: var(--pink);
+  font-weight: bold;
+  font-size: 2rem;
+  margin-top: 35px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.contact form h4 span {
+  border-bottom: dashed 2px;
+}
+.privacy_wrapper {
+  overflow-y: scroll;
+  font-size: 1.5rem;
+  width: 90%;
+  height: 300px;
+  border: 1px solid #dee2e6;
+  margin: 0 auto;
+  padding: 20px;
+}
+.privacy_wrapper p {
+  margin-top: 30px;
+  margin-bottom: 6px;
+}
+.privacyBox ul li, .privacyBox ol li {
+  padding: 3px 0;
+  border-bottom: 1px dashed #bbb;
+}
+.privacyBox ol:first-child li {
+  border: none;
+}
+.privacy_btn {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  position: relative;
+}
+.privacy_btn button {
+  background-color: var(--pink);
+  border: none;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* 個人情報取り扱い ここまで */
+
+input[type="text"], select {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.privacyBox {
+  background-color: #fff;
+}
+.contact-form .sec-ttl {
+  padding-top: 45px;
+}
+label.privacy_check {
+  margin-bottom: 30px;
+}
+.table_float label {
+  font-weight: normal !important;
+  margin-right: 20px;
+}
+
+/* お問い合わせレスポンシブ */
+
+@media (max-width: 991px) {
+  .contact-number {
+    margin-bottom: 0;
+  }
+  .contact-phone, .contact-fax {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact .contact-number-box {
+    margin-bottom: 45px;
+  }
+}
+@media(max-width:767px) {
+  .contact .table_float td {
+    text-align: left;
+  }
+}
+@media (max-width: 450px) {
+  .min-sp-br {
+    display: block;
+  }
+  .contact_wrapper {
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+  .contact-phone, .contact-fax {
+    padding: 30px 15px;
+  }
+  .contact .sec-ttl {
+    display: block;
+  }
+  .contact .sec-ttl::before {
+    margin-left: 15px;
+  }
+  form .table th, form .table td {
+    vertical-align: middle;
+    display: block;
+    width: 100%;
+  }
+  .table td {
+    border: none;
+  }
+  .hissu {
+    margin-right: 0;
+  }
+  .privacy_btn button {
+    padding: 10px 20px;
+  }
+}
+/* ここまで */

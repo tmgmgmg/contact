@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせサンプル</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap4-print.css">
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/solid.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/pagetop.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/ofi.min.js"></script>
+  <script src="js/tel-3.1.js"></script>
+  <script src="https://ajaxzip3.github.io/ajaxzip3.js"></script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+
+  <!-- ここから共通 -->
+
+  <main class="contact">
+
+    <!-- サブヘッダーなど -->
+
+    <section class="common-header container">
+      <div class="contact_wrapper">
+        <!-- <h3 class="sec-ttl">お電話・FAXでのお問い合わせ</h3> -->
+        <div class="container">
+          <div class="row contact-number">
+            <div class="col-md-6 contact-number-box">
+              <div class="contact-phone">
+                <h3 class="contact-ttl"><span>お電話でのお問い合わせ</span></h3>
+                <i class="fas fa-phone-alt"></i>
+                <span data-action="call">045-442-7373</span>
+                <div class="p">
+                  受付時間　10：00～17：00
+                  <span class="br br-margin">土・祝　13時～17時</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 contact-number-box">
+              <div class="contact-fax">
+                <h3 class="contact-ttl"><span>FAXでのお問い合わせ</span></h3>
+                <i class="fas fa-fax"></i>
+                <span>045-442-7358</span>
+                <div class="p">受付時間　24時間</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="contact-form bottom">
+      <div class="container mail-form">
+        <h3 class="sec-ttl">メールでの<span class="min-sp-br"></span>お問い合わせ</h3>
+        <div class="p">特定非営利活動法人ステラポラリスへのお問い合わせありがとうございます。
+          <span class="br line-br"></span>内容を確認次第、お電話、またはメールにて連絡致します。
+          <span class="br"></span>尚、お問い合わせ内容によりましては、回答に時間がかかる場合がございます。
+          <span class="br line-br"></span>また、ご入力いただいたEメールアドレスが違っている場合や、システム障害などによりお返事できない場合がございます。
+          <span class="br"></span>返答のない場合は大変お手数ですが、お電話でその旨をお問い合わせください。
+          <span class="br line-br"></span>
+          ※お問い合わせ情報は、フォームにご記入頂きましたメールアドレス宛にも自動返送されます。
+        </div>
+      </div>
+      <div class="container">
+        <div class="p hissu-wrapper">
+          <span class="hissu">※</span>印は必須項目です。
+        </div>
+        <form method="post" action="contact/postmail" enctype="multipart/form-data">
+          <div class="contact-box">
+            <table class="table mb30 table_float">
+              <tr>
+                <th class="w25p">お問い合わせ項目<span class="hissu">※</span></th>
+                <td class="td-inline">
+                  <input name="word1" type="hidden" value="" />
+                  <div class="conf-item">
+                    <input name="word1[]" type="radio" value="自立訓練・生活訓練について" id="Inquiry01" />
+                    <label for="Inquiry01">自立訓練・生活訓練について</label>
+                  </div>
+                  <div class="conf-item">
+                    <input name="word1[]" type="radio" value="共同生活援助(グループホーム)について" id="Inquiry02" />
+                    <label for="Inquiry02">共同生活援助(グループホーム)について</label>
+                  </div>
+                  <div class="conf-item">
+                    <input name="word1[]" type="radio" value="電話相談事業について" id="Inquiry03" />
+                    <label for="Inquiry03">電話相談事業について</label>
+                  </div>
+                  <div class="conf-item">
+                    <input name="word1[]" type="radio" value="その他" id="Inquiry04" />
+                    <label for="Inquiry04">その他</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th> お名前<strong class="hissu">※</strong></th>
+                <td><input name="word3" type="text" size="35" class="form-m needinput" placeholder="全角入力　例：神奈川　太郎" /></td>
+              </tr>
+              <tr>
+                <th>フリガナ<strong class="hissu">※</strong></th>
+                <td><input name="word4" type="text" size="35" class="form-m needinput" placeholder="全角入力　例：カナガワ　タロウ" />
+                </td>
+              </tr>
+              <tr>
+                <th>郵便番号</th>
+                <td><input name="word9" type="text" size="35" class="form-s" onKeyUp="AjaxZip3.zip2addr(this,'','word10','word11','','',false);" placeholder="（半角入力　例：240-0002）" />
+                </td>
+              </tr>
+              <tr>
+                <th>都道府県</th>
+                <td><select name="word10">
+                    <option selected="selected">都道府県</option>
+                    <option value="北海道">北海道</option>
+                    <option value="青森県">青森県</option>
+                    <option value="秋田県">秋田県</option>
+                    <option value="岩手県">岩手県</option>
+                    <option value="宮城県">宮城県</option>
+                    <option value="山形県">山形県</option>
+                    <option value="福島県">福島県</option>
+                    <option value="新潟県">新潟県</option>
+                    <option value="愛知県">愛知県</option>
+                    <option value="山梨県">山梨県</option>
+                    <option value="富山県">富山県</option>
+                    <option value="静岡県">静岡県</option>
+                    <option value="長野県">長野県</option>
+                    <option value="石川県">石川県</option>
+                    <option value="岐阜県">岐阜県</option>
+                    <option value="福井県">福井県</option>
+                    <option value="茨城県">茨城県</option>
+                    <option value="栃木県">栃木県</option>
+                    <option value="群馬県">群馬県</option>
+                    <option value="千葉県">千葉県</option>
+                    <option value="埼玉県">埼玉県</option>
+                    <option value="東京都">東京都</option>
+                    <option value="神奈川県">神奈川県</option>
+                    <option value="大阪府">大阪府</option>
+                    <option value="京都府">京都府</option>
+                    <option value="和歌山県">和歌山県</option>
+                    <option value="奈良県">奈良県</option>
+                    <option value="三重県">三重県</option>
+                    <option value="滋賀県">滋賀県</option>
+                    <option value="兵庫県">兵庫県</option>
+                    <option value="岡山県">岡山県</option>
+                    <option value="広島県">広島県</option>
+                    <option value="島根県">島根県</option>
+                    <option value="山口県">山口県</option>
+                    <option value="鳥取県">鳥取県</option>
+                    <option value="香川県">香川県</option>
+                    <option value="愛媛県">愛媛県</option>
+                    <option value="徳島県">徳島県</option>
+                    <option value="高知県">高知県</option>
+                    <option value="福岡県">福岡県</option>
+                    <option value="佐賀県">佐賀県</option>
+                    <option value="長崎県">長崎県</option>
+                    <option value="大分県">大分県</option>
+                    <option value="熊本県">熊本県</option>
+                    <option value="宮崎県">宮崎県</option>
+                    <option value="鹿児島県">鹿児島県</option>
+                    <option value="沖縄県">沖縄県</option>
+                  </select></td>
+              </tr>
+              <tr>
+                <th>市区町村</th>
+                <td><input name="word11" type="text" size="35" class="form100" placeholder="例：横浜市保土ヶ谷区宮田町1丁目" /></td>
+              </tr>
+              <tr>
+                <th>番地</th>
+                <td><input name="word11" type="text" size="35" class="form100" placeholder="例：4-6" /></td>
+              </tr>
+              <tr>
+                <th>建物名など</th>
+                <td><input name="word11" type="text" size="35" class="form100" placeholder="例：〇〇ビル 1F" /></td>
+              </tr>
+              <tr>
+                <th>電話番号<strong class="hissu">※</strong></th>
+                <td><input name="word12" type="text" size="35" class="form-m needinput" placeholder="例：045-442-7373　携帯可" /></td>
+              </tr>
+
+              <tr>
+                <th>メールアドレス<strong class="hissu">※</strong></th>
+                <td><input name="word8" type="text" size="35" class="form-l needinput" placeholder="例：sample@example.com" /></td>
+              </tr>
+
+              <tr>
+                <th>お問い合わせ内容</th>
+                <td><textarea name="word12" cols="40" rows="10" class="form100 needinput" placeholder="お問い合わせ内容をご記入ください"></textarea></td>
+              </tr>
+            </table>
+
+            <h4 class="large mb20 houshin"><span>個人情報取り扱いについて</span></h4>
+            <div class="privacyBox mb40 privacy_wrapper" id="privacy">
+              <ol class="mb20">
+                <li>当社は、個人情報保護の重要性を認識し、個人情報保護の方針を定めるとともに、個人情報の適切な保護に努めます。</li>
+                <li>個人情報の収集、利用に関する基本原則、管理方法ならびに実効性を持たせる手段として教育・訓練、監査等について以下のとおり規定し、実行して参ります。</li>
+              </ol>
+              <p class="mb20"><strong><span class="lightgreen">■</span>個人情報の収集、利用、提供等に関する基本原則</strong></p>
+              <ol class="mb20">
+                <li>1.個人情報を直接収集する際は、適法かつ公正な手段により、本人の同意を得た上で行います。</li>
+                <li>2.収集にあたっては、利用目的を明確にし、その目的のために必要な範囲内にとどめます。</li>
+                <li>3.個人の利益を侵害する可能性が高い機微な情報は、本人の明確な同意がある場合または法令等の裏付けがある場合以外には収集しません。</li>
+                <li>
+                  4.当社が個人情報の処理を伴う業務を外部から受託する場合や外部へ委託する場合は、個人情報に関する秘密の保持、再委託に関する事項、事故時の責任分担、契約終了時の個人情報の返却および消去等について定め、それに従います。
+                </li>
+                <li>5.個人情報は、本人の同意を得た範囲内で利用、提供します。</li>
+              </ol>
+              <p class="mb20"><strong><span class="lightgreen">■</span>個人情報の管理について</strong></p>
+              <ul>
+                <li>1.当社が直接収集または外部から業務を受託する際に入手した個人情報は、正確な状態に保ち、不正アクセス、紛失・破壊・改ざんおよび漏洩等を防止するための措置を講じます。</li>
+                <li>2.個人情報の処理を伴う業務を外部から受託する場合は、委託者が個人情報を入手した際、本人の同意を得た上で、適法かつ公正な手段によって収集したものであることを確認します。</li>
+              </ul>
+              <p class=""><strong><span class="lightgreen">■</span>法令及びその他の規範について</strong><br />当社は、個人情報の保護に関係する日本の法令及びその他の規範を遵守し、本方針の継続的改善に努めます。
+              </p>
+              <p><strong><span class="lightgreen">■</span>本人からのお問い合わせ</strong><br>
+                本人からの個人情報の取扱いに関するお問い合わせには、妥当な範囲において、すみやかな対応に努めます。<br>
+                このページの内容に関するご質問及びお客様がご自身の個人情報についてご確認されたい場合には、【<span data-action="call" data-tel="0454427373">TEL：045-442-7373</span> 】までお問い合わせください。
+              </p>
+            </div>
+            <div class="privacy_btn">
+              <div class="btn_pos">
+                <div class="agree_check">
+                  <p class="tac mb20 agreeBox">
+                    <input name="word16" type="hidden" value="" />
+                    <input name="word16[]" type="checkbox" value="プライバシーポリシーに同意する" id="doi" />
+                    <label for="doi" class="privacy_check">プライバシーポリシーに同意する</label>
+                  </p>
+                  <button type="submit" class="form_btn check_btn">個人情報の取扱いについて同意の上、
+                    <span class="min-sp-br"></span>確認画面へ</button>
+                </div>
+              </div>
+              <div class="tac mb40 formBtn">
+                <button type="submit">リセット</button>
+              </div>
+              <div class="tac mb40 formBtn">
+                <button type="submit">戻る</button>
+                <button type="submit" class="sent-btn">送信</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- ここまで -->
+
+</body>
+</html>
